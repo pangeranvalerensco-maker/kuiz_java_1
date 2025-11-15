@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Data Mahasiswa</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="mhs : ${listMahasiswa}">
+                <td th:text="${mhs.nim}">NIM</td>
+                <td th:text="${mhs.nama}">Nama</td>
+                <td th:text="${mhs.alamat}">Alamat</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
